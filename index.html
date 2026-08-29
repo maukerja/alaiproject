@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Vibe Check ✨</title>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="world">
+
+        <div class="sun"></div>
+
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+        <div class="cloud cloud-three"></div>
+
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+        <div class="sparkle sparkle-three">✦</div>
+
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+
+        <div class="flower flower-one">✿</div>
+        <div class="flower flower-two">✿</div>
+
+    </div>
+
+
+    <main class="app">
+
+
+        <!-- =====================
+             START
+        ====================== -->
+
+        <section
+            class="screen active"
+            id="startScreen"
+        >
+
+            <div class="start-content">
+
+                <p class="eyebrow">
+                    ✦ WELCOME TO VIBE CHECK ✦
+                </p>
+
+
+                <div class="magic-orb">
+                    ✧
+                </div>
+
+
+                <h1>
+                    what's your
+                    <span>vibe today?</span>
+                </h1>
+
+
+                <p class="intro-text">
+                    sebuah perjalanan kecil buat ngecek
+                    isi kepala, mood, dan soundtrack hidup kamu hari ini.
+                </p>
+
+
+                <p
+                    class="escape-message"
+                    id="escapeMessage"
+                >
+                    coba pencet mulai kalau bisa 👀
+                </p>
+
+
+                <div
+                    class="start-area"
+                    id="startArea"
+                >
+
+                    <button
+                        id="startButton"
+                        type="button"
+                        class="start-button"
+                    >
+                        mulai ✨
+                    </button>
+
+                </div>
+
+
+                <p class="small-text">
+                    tombolnya agak toxic dikit btw 😭
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================
+             PUZZLE
+        ====================== -->
+
+        <section
+            class="screen"
+            id="puzzleScreen"
+        >
+
+            <div class="card">
+
+                <p class="quest-label">
+                    QUEST #01
+                </p>
+
+
+                <h2>
+                    deskripsikan developernya?
+                </h2>
+
+
+                <p class="card-text">
+                    susun huruf ini sampai menjadi jawaban
+                    yang paling benar dan tidak bisa dibantah 😌
+                </p>
+
+
+                <p class="puzzle-hint">
+                    klik dua huruf untuk menukar posisinya
+                </p>
+
+
+                <div
+                    class="puzzle-board"
+                    id="puzzleBoard"
+                ></div>
+
+
+                <p
+                    class="status-message"
+                    id="puzzleMessage"
+                >
+                    jangan asal pencet ya bestie 😭
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================
+             NAME
+        ====================== -->
+
+        <section
+            class="screen"
+            id="nameScreen"
+        >
+
+            <div class="card name-card">
+
+                <div class="crown">
+                    ♕
+                </div>
+
+
+                <p class="quest-label">
+                    QUEST COMPLETE
+                </p>
+
+
+                <h2>
+                    valid banget 😭✨
+                </h2>
+
+
+                <p class="card-text">
+                    sebelum lanjut ke bagian yang agak
+                    serius dikit, kenalan dulu dong.
+                </p>
+
+
+                <input
+                    id="nameInput"
+                    type="text"
+                    maxlength="25"
+                    placeholder="masukin nama kamu..."
+                    autocomplete="off"
+                >
+
+
+                <p
+                    class="input-error"
+                    id="nameError"
+                ></p>
+
+
+                <button
+                    id="nameButton"
+                    type="button"
+                    class="primary-button"
+                >
+                    lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================
+             QUESTIONS
+        ====================== -->
+
+        <section
+            class="screen"
+            id="questionScreen"
+        >
+
+            <div class="card question-card">
+
+                <div class="question-top">
+
+                    <p
+                        class="quest-label"
+                        id="questionCounter"
+                    >
+                        QUESTION 1/3
+                    </p>
+
+
+                    <span
+                        class="question-side"
+                        id="questionSide"
+                    >
+                        santai aja
+                    </span>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+
+                <h2
+                    id="questionTitle"
+                ></h2>
+
+
+                <p
+                    class="card-text"
+                    id="questionText"
+                ></p>
+
+
+                <div
+                    class="answers"
+                    id="answers"
+                ></div>
+
+
+                <button
+                    id="nextButton"
+                    type="button"
+                    class="primary-button"
+                    disabled
+                >
+                    lanjut →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================
+             RESULT
+        ====================== -->
+
+        <section
+            class="screen"
+            id="resultScreen"
+        >
+
+            <div class="result-card">
+
+                <p class="final-label">
+                    👑 YOUR FINAL VIBE
+                </p>
+
+
+                <h2 id="finalTitle">
+                    lagi ngecek vibe...
+                </h2>
+
+
+                <p
+                    class="final-description"
+                    id="finalText"
+                ></p>
+
+
+
+                <!-- RATINGS -->
+
+                <div class="ratings">
+
+                    <div class="rating-item">
+
+                        <div class="rating-title">
+
+                            <span>chill</span>
+
+                            <span id="chillValue">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="rating-track">
+
+                            <div
+                                class="rating-fill chill-fill"
+                                id="chillBar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="rating-item">
+
+                        <div class="rating-title">
+
+                            <span>energy</span>
+
+                            <span id="energyValue">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="rating-track">
+
+                            <div
+                                class="rating-fill energy-fill"
+                                id="energyBar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="rating-item">
+
+                        <div class="rating-title">
+
+                            <span>chaos</span>
+
+                            <span id="chaosValue">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="rating-track">
+
+                            <div
+                                class="rating-fill chaos-fill"
+                                id="chaosBar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MUSIC -->
+
+                <div class="music-section">
+
+                    <p class="music-label">
+                        🎧 SOUNDTRACK KAMU
+                    </p>
+
+
+                    <div class="song-info">
+
+                        <div class="song-icon">
+                            ♫
+                        </div>
+
+
+                        <div class="song-details">
+
+                            <h3 id="songTitle">
+                                lagi nyari lagu...
+                            </h3>
+
+
+                            <p id="songArtist">
+                                bentar ya 😭
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="spotify-player"
+                        id="spotifyPlayer"
+                    ></div>
+
+                </div>
+
+
+                <p
+                    class="spotify-status"
+                    id="spotifyStatus"
+                >
+                    lagi nyari soundtrack yang cocok...
+                </p>
+
+
+                <button
+                    id="restartButton"
+                    type="button"
+                    class="restart-button"
+                >
+                    ↻ mulai dari awal
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script
+        src="assets/js/app.js"
+    ></script>
+
+</body>
+</html>
